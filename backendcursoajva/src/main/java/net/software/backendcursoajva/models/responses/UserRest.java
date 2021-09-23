@@ -1,6 +1,6 @@
-package net.software.backendcursoajva.models.response;
+package net.software.backendcursoajva.models.responses;
 
-public class UserRes {
+public class UserRest {
 private String userId;
 private String firstName;
 private String lastName;

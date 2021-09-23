@@ -1,4 +1,4 @@
-package net.software.backendcursoajva.share.dto;
+package net.software.backendcursoajva.shared.dto;
 
 import java.io.Serializable;
 
