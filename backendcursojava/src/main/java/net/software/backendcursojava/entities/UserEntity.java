@@ -48,11 +48,11 @@ public class UserEntity implements Serializable {
         this.userId = userId;
     }
 
-    public String getFirstName() {
+    public String getfirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setfirstName(String firstName) {
         this.firstName = firstName;
     }
 

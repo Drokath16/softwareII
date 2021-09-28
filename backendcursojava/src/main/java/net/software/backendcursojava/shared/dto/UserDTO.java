@@ -30,10 +30,10 @@ public class UserDTO implements Serializable{
     public void setUserId(String userId) {
         this.userId = userId;
     }
-    public String getFirstName() {
+    public String getfirstName() {
         return firstName;
     }
-    public void setFirstName(String firstName) {
+    public void setfirstName(String firstName) {
         this.firstName = firstName;
     }
     public String getLastName() {

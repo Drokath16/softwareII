@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import net.software.backendcursojava.models.request.UserDetailRequestModel;
 import net.software.backendcursojava.models.responses.UserRest;
 import net.software.backendcursojava.services.UserServiceInterface;
@@ -21,25 +20,17 @@ public class UserController {
     @Autowired
     UserServiceInterface userService;
 
-
     @GetMapping //obtener consultar informacion
     public String getUser(){
         return "Obtener usuarios";
     }
-
     @PostMapping //Creando informacion
     public UserRest createUser(@RequestBody UserDetailRequestModel userDetails){
-        
         UserRest userToReturn = new UserRest();
-
         UserDTO userDTO = new UserDTO();
-
         BeanUtils.copyProperties(userDetails, userDTO);
-
         UserDTO createdUser = userService.createUser(userDTO);
-
         BeanUtils.copyProperties(createdUser, userToReturn);
-
         return userToReturn;
     }
 

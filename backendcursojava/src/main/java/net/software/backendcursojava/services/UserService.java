@@ -21,12 +21,10 @@ public class UserService implements UserServiceInterface {
         // TODO logica de la creacion del usuario
         UserEntity userEntity = new UserEntity();
         BeanUtils.copyProperties(userDto, userEntity);
-
         userEntity.setEncryptedPassword("testpassword");
         userEntity.setUserId("testUserId");
 
         UserEntity storedUserDetail =  userRepository.save(userEntity);
-
         UserDTO userToReturn = new UserDTO();
         BeanUtils.copyProperties(storedUserDetail, userToReturn);
         return userToReturn;
